@@ -1,0 +1,70 @@
+<resources>
+
+    <string name="app_name">通讯录</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="userName">请输入用户名</string>
+    <string name="userPwd">请输入密码</string>
+    <string name="error_name">请输入用户名！</string>
+    <string name="error_pwd">请输入密码！</string>
+    <string name="search_tip">搜索联系人</string>
+    
+    <string name="down_image_name">异步下载图片</string>
+    <string name="pull_list_name">下拉刷新分页</string>
+    <string name="table_list_name">表格List</string>
+    <string name="slider_button_name">滑动按钮</string>
+    <string name="view_play_name">图片联播</string>
+    <string name="down_list">下载器</string>
+    <string name="welcome_name">欢迎页面</string>
+    <string name="level_name">等级条</string>
+    <string name="page_frame">Tab Menu框架</string>
+    <string name="wheel_name">轮子选择</string>
+    <string name="photo_add_name">拍照相册选择</string>
+    <string name="chart_name">图表</string>
+    <string name="chart_line">XY线图</string>
+    <string name="chart_bar">XY柱图</string>
+    <string name="chart_pie">饼图</string>
+    <string name="undownLoad_title">未下载</string>
+    <string name="download_complete_title">下载完成</string>
+    <string name="calendar_name">日历选择器</string>
+    
+    <string name="okBtn">确定</string>
+    <string name="cancelBtn">取消</string>
+    <string name="see">查看</string>
+    <string name="about">关于</string>
+    <string name="version_lable">程序版本：</string>
+    <string name="copyright">版权所有  CopyRight 2012 AndBase</string>
+    <string name="about_desc">\t\tAndBase开发框架
+     \n\t\tandbase是为Android开发者量身打造的一款开源类库产品，您可以在本站中获取到最新的代码，示例以及开发文档。
+	 andbase中包含了大量的开发常用手段，如网络下载数据的方法，多线程，线程池的管理，图片缓存管理，
+	   图片文件下载上传，对常用工具类入字符串，日期，文件处理，图片处理等进行了进一步的封装，
+	   能够使您的应用在团队开发中减少冗余代码，很大的提高了代码的维护性与开发高效行，
+	   能很好的规避由于开发疏忽而导致常犯的错误。
+	   同时andbase封装了大量的常用且系统本身没有的控件，
+	   如list分页，下拉刷新，图片轮播，多线程支持断点续传的下载器，左右侧边栏，
+	   图片多张上传，iphone中比较流行的轮子选择，在achart基础上进行改进与精简的图表，日历选择器等。
+	   功能很多，但不会使你的程序包变大，却能大幅度缩小您的程序。而这一切都是免费的。
+	 \n
+     \n官方主页：www.418log.org
+     \nQQ群：38535812
+    </string>
+    
+    <string name="title_transparent_desc">
+                设置标题栏透明,
+                在启动Activity时添加参数：
+      intent.putExtra(
+         AbConstant.TITLE_TRANSPARENT_FLAG
+       , AbConstant.TITLE_TRANSPARENT);
+                同时布局使用ScrollView，
+                并向下偏移标题栏的高度
+                \n^\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|
+                \n|\n|\n|\n|\n|\n|\n|\n|\n|
+    </string>
+    
+    <string name="date_picker">日期选择：</string>
+    <string name="time_picker">时间选择：</string>
+    <string name="data1_desc">选择：</string>
+    <string name="data1_unit">单位</string>
+    
+</resources>
+

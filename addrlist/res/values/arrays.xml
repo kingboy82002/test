@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="desktop_list_head_strings">
+        <item>常用</item>
+        <item>操作</item>
+    </string-array>
+    <string-array name="desktop_list_item_favorite_strings">
+        <item>消息</item>
+        <item>虫友</item>
+        <item>我的分享</item>
+        <item>应用与游戏</item>
+    </string-array>
+    <string-array name="desktop_list_item_action_strings">
+        <item>选项</item>
+        <item>注销</item>
+        <item>关于</item>
+    </string-array>
+</resources>
