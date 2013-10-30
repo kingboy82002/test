@@ -7,7 +7,9 @@ import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -17,9 +19,12 @@ import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.ab.activity.AbActivity;
 import com.ab.view.titlebar.AbTitleBar;
@@ -76,8 +81,17 @@ public class MainActivity extends AbActivity {
 				new String[] { "itemsIcon", "itemsTitle","itemsText" }, new int[] { R.id.itemsIcon,
 						R.id.itemsTitle,R.id.itemsText });
     	mListView.setAdapter(myListViewAdapter);
+    	//item被点击事件
+    	mListView.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> adapter, View view, int position,long id) {
+				TextView mobile_tv = (TextView)view.findViewById(R.id.itemsText);
+				Intent intent=new Intent("android.intent.action.CALL",Uri.parse("tel:"+mobile_tv.getText()));
+				startActivity(intent);
+			}
+		});
     	
-    	
+    	//加载联系人数据
     	showProgressDialog("正在加载数据...");
     	new Thread(new Runnable() {
 			@Override
@@ -148,7 +162,7 @@ public class MainActivity extends AbActivity {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
 				newList.clear();  
-	            if (search_et.getText() != null && search_et.getText().toString().length()>2) {  
+	            if (search_et.getText() != null && search_et.getText().toString().length()>0) {  
 	                String input_info = search_et.getText().toString();  
 	                newList = getNewData(input_info);  
 	                
