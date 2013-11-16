@@ -9,8 +9,9 @@
         android:id="@+id/search_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/search_tip"
+        android:hint="@string/search_tip"
         android:textColor="@color/gray"
+        android:inputType="textUri"
         >
     </EditText>
 

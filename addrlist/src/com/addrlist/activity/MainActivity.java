@@ -145,8 +145,9 @@ public class MainActivity extends AbActivity {
 
  			@Override
  			public void onClick(View v) {
- 				//Intent intent = new Intent(MainActivity.this,DankeActivity.class); 
- 				//startActivity(intent);
+ 				showToastInThread("进入设置界面");
+ 				Intent intent = new Intent(MainActivity.this,ManageActivity.class); 
+ 				startActivity(intent);
  			}
          });
     	/**

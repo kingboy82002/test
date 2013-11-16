@@ -65,6 +65,21 @@
     <string name="time_picker">时间选择：</string>
     <string name="data1_desc">选择：</string>
     <string name="data1_unit">单位</string>
+   
     
+	<string name="dialog_update_title">更新</string>
+	<string name="dialog_update_msg">发现新版本，版本号：</string>
+	<string name="dialog_update_msg2">，是否立即更新？</string>
+	<string name="dialog_update_msg3">已经是最新版本！</string>
+	<string name="dialog_update_btnupdate">更新</string>
+	<string name="dialog_update_btnnext">下次再说</string>
+	<string name="dialog_updatefailed_msg">检查更新版本错误：\n</string>
+	
+	<string name="dialog_downloading_msg">正在下载更新&#8230;</string>
+	<string name="dialog_alert_title">警告</string>
+	<string name="dialog_downfailed_btndown">重新下载</string>
+	<string name="dialog_downfailed_btnnext">以后再说</string>
+	<string name="dialog_error_title">错误</string>
+	<string name="dialog_downfailed_msg">下载更新失败，是否重试？\n</string>    
 </resources>
 
