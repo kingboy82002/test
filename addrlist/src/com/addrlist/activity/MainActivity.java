@@ -14,7 +14,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.Editable;
-import android.text.Html;
 import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -32,6 +31,7 @@ import com.addrlist.adapter.MyListViewAdapter;
 import com.addrlist.db.dao.UserInfoDao;
 import com.addrlist.global.MyApplication;
 import com.addrlist.model.UserInfo;
+import com.addrlist.util.PinyinUtils;
 
 
 public class MainActivity extends AbActivity {
@@ -54,6 +54,7 @@ public class MainActivity extends AbActivity {
         mAbTitleBar.setTitleLayoutBackground(R.drawable.top_bg);
         mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
 		mAbTitleBar.setTitleLayoutGravity(Gravity.CENTER, Gravity.CENTER);
+		mAbTitleBar.setLogo(R.drawable.button_selector_back_nouse);
 		initTitleRightLayout();
 		
 		//获取ListView对象
@@ -133,7 +134,13 @@ public class MainActivity extends AbActivity {
     	View rightViewApp = mInflater.inflate(R.layout.app_btn, null);
     	mAbTitleBar.addRightView(rightViewApp);
     	Button appBtn = (Button)rightViewApp.findViewById(R.id.appBtn);
-    	
+    	//左边按钮
+        mAbTitleBar.getLogoView().setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+			}
+		});
+        //右边按钮
     	appBtn.setOnClickListener(new View.OnClickListener(){
 
  			@Override
@@ -207,7 +214,7 @@ public class MainActivity extends AbActivity {
         for (int i = 0; i < aList.size(); i++) {  
             UserInfo domain = aList.get(i);  
             //如果遍历到的名字包含所输入字符串  
-            if (domain.getMobile().contains(input_info)) {
+            if (domain.getMobile().contains(input_info) || PinyinUtils.getFirstHanyuPinyin(domain.getUsername()).contains(input_info) || PinyinUtils.getHanyuPinyin(domain.getUsername()).contains(input_info)) {
             	//赋值为另一个变量,可以方便修改里面的内容
             	UserInfo ui = new UserInfo();
             	ui.setUsername(domain.getUsername());
